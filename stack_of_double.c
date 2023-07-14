@@ -9,15 +9,15 @@
 struct stackdbl {
     int capacity;
     int size;
-    double *head;
-    double *data;
+    double *head; /* points to the head of the stack */
+    double *data; /* points to the beginning of the occupied memory */
 };
 
 void stackdbl_init(struct stackdbl *sod) {
     sod->capacity = 0;
     sod->size = 0;
-    sod->head = NULL; /* points to the head of the stack */
-    sod->data = NULL; /* points to the beginning of the occupied memory */
+    sod->head = NULL; 
+    sod->data = NULL; 
 }
 
 void stackdbl_destroy(struct stackdbl *sod) {
